@@ -1,9 +1,15 @@
 package main
 
-import (
-	"fmt"
-)
+// import (
+// 	"fmt"
+// )
 func main() {
-	a,b := retu(7,3)
-	fmt.Println(a,b)
+	// var my = mystru{"xiaoming",18}
+	// fmt.Println(my.mythod("xiaohua"))
+	// fmt.Println(my.mythod2(20))
+	// var a = Adder(1)
+	// fmt.Println(a(0))
+	// fmt.Println(a(4))
+	// pr(1,2,3,"cas",5)
+	adda(10)
 }

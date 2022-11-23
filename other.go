@@ -264,3 +264,81 @@ func retu(a,b int) (c,d int) {
 	return a + b , a - b
 	// return 
 }
+
+type inter interface {
+	mythod(interface{}) string
+	mythod2(interface{}) int
+}
+
+type mystru struct {
+	name string
+	age int
+}
+
+func (my mystru) mythod(p interface{}) string {
+	var ok bool
+	my.name,ok = p.(string)
+	if ok {
+		fmt.Println(">>>===222")
+	}else {
+		fmt.Println(">>>===111")
+	}
+	return my.name
+}
+
+func (my mystru) mythod2(p interface{}) int {
+	my.age = p.(int)
+	return my.age
+}
+
+func Adder(a int) func(int) int{
+    var x int
+    return func(d int) int{
+        x+=d
+		a++
+        return a
+    }
+}
+
+func pr (args ... interface{}) {
+	prin(args...)
+}
+func prin (args ... interface{}) {
+	for _,arg := range args {
+		switch arg.(type) {
+		case int:
+			fmt.Println(arg, "is an int value.")
+		case string:
+			fmt.Println(arg, "is a string value.")
+		case int64:
+			fmt.Println(arg, "is an int64 value.")
+		default:
+			fmt.Println(arg, "is an unknown type.")
+	}
+	}
+}
+
+func deferf () {
+	fmt.Println("defer begin")
+    // 将defer放入延迟调用栈
+    defer fmt.Println(1)
+    defer fmt.Println(2)
+    // 最后一个放入, 位于栈顶, 最先调用
+    defer fmt.Println(3)
+    fmt.Println("defer end")
+}
+
+func ad (b int) (res int) {
+	if b < 3 {
+		res = 1
+	} else {
+		res += ad(b-1) + ad(b-2) 
+	}
+	return
+}
+func adda (a int) {
+	for i := 1;i <= a; i++ {
+		val := ad(i)
+		fmt.Println(val)
+	}
+}
