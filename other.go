@@ -342,3 +342,17 @@ func adda (a int) {
 		fmt.Println(val)
 	}
 }
+
+func fpanic() {
+	defer err := recover()
+	switch err.(type) {
+	case runtime.Error: // 运行时错误
+		fmt.Println("runtime error:", err)
+	default: // 非运行时错误
+		fmt.Println("error:", err)
+	}	
+	
+	panic("crash")
+
+	
+}

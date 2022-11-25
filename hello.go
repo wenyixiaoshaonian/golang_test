@@ -11,5 +11,5 @@ func main() {
 	// fmt.Println(a(0))
 	// fmt.Println(a(4))
 	// pr(1,2,3,"cas",5)
-	adda(10)
+	fpanic()
 }
