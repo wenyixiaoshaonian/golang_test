@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 type std struct {
@@ -116,3 +117,26 @@ func (m Mystring) Swap(i, j int) {
 	m[i], m[j] = m[j], m[i]
 }
 
+func sort_int() {
+	names := sort.IntSlice{
+		34,
+		12,
+		234,
+		555,
+		1,
+	}
+	sort.Sort(names)
+	fmt.Println(names)
+}
+
+func sort_int_q() {
+	names := []int{
+		34,
+		12,
+		234,
+		555,
+		12,
+	}
+	sort.Ints(names)
+	fmt.Println(names)
+}
