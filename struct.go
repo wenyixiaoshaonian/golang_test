@@ -140,3 +140,20 @@ func sort_int_q() {
 	sort.Ints(names)
 	fmt.Println(names)
 }
+
+
+type Personer interface {
+	Eat()
+	Sleep(duration int)
+}
+type Student struct {
+	Name string
+	Age int
+	Score float32
+}
+func (stu Student)Eat(){
+	fmt.Println("Call stu eat")
+}
+func (stu Student)Sleep(duration int){
+	fmt.Println("Sleep duration =", duration, "hours")
+}
