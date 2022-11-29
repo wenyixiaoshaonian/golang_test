@@ -1,6 +1,6 @@
 package main
 
-// import te "test/test_lib"
+import te "test/golang_test/test_lib"
 import "fmt"
 
 type Any interface {}
@@ -13,7 +13,7 @@ const(
     identifier2
     identifier3
 )
-func main() {
+func hello() {
 	// var my = mystru{"xiaoming",18}
 	// fmt.Println(my.mythod("xiaohua"))
 	// fmt.Println(my.mythod2(20))
@@ -69,4 +69,6 @@ func main() {
 	person = stu
 	person.Eat()
 	person.Sleep(8)
+
+	te.Lhello()
 }
