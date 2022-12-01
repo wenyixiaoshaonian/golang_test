@@ -24,7 +24,7 @@ func main() {
 func process(conn net.Conn) {
 	defer conn.Close()
 	for {
-		var buf [128]byte
+		var buf [1024]byte
 		//接受数据
 		n, err := conn.Read(buf[:])
 		if err != nil {

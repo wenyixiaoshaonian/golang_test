@@ -21,9 +21,7 @@ func main() {
 			break
 		}
 		trimmedInput := strings.TrimSpace(input)
-		if trimmedInput == "Q" {
-			break
-		}
+
 		//发送数据
 		if _, err = conn.Write([]byte(trimmedInput)); err != nil {
 			fmt.Printf("write failed , err : %v\n", err)
