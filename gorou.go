@@ -23,7 +23,7 @@ func gofunc(s string) {
 	}
 }
 
-func main() {
+func gorou() {
 	runtime.GOMAXPROCS(1)
 	wg.Add(1)
 	chanName := make(chan string,5)
